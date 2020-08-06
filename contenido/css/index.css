@@ -1,0 +1,191 @@
+#contenedor-global{
+    width: 100%;
+    padding: 20px 5%;
+    text-align: center;
+}
+#contenedor-global img{
+    width: auto;
+    margin: 20px;
+}
+#contenedor-global h1, #contenedor-global p{
+    width: 50%;
+    margin: 20px auto;
+}
+#contenedor-global h1{  
+    color: rgba(10,10,10,1);
+    font-family: Titulo,Roboto;
+    font-size: 40px;
+}
+#contenedor-global p{  
+    color: rgba(55,55,55,1);
+    font-family: Principal,Roboto;
+    font-size: 17px;
+    line-height: 20px;
+}
+#contendor-contenido{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px;
+}
+#contendor-contenido img{
+    width: 30%;
+    padding: 10px;
+    object-fit: contain;
+}
+#contendor-contenido form{
+    width: 30%;
+    padding: 10px 20px;
+    text-align: center;
+    transition: all .5s ease-out;
+}
+#contendor-contenido form:hover{
+    -webkit-box-shadow: -10px 7px 5px -1px rgba(33,33,33,0.3);
+    -moz-box-shadow: -10px 7px 21px -1px rgba(33,33,33,0.3);
+    box-shadow: -10px 7px 5px -1px rgba(33,33,33,0.3);
+}
+#contendor-contenido form label{
+    width: 100%;
+    display: block;
+    padding: 10px 0px;
+    color: rgba(10,10,10,1);
+    font-family: Principal,Roboto;
+    font-size: 20px;    
+    font-weight: bold;
+    text-align: left;
+}
+#contendor-contenido form input, #contendor-contenido form select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;    
+}
+#contendor-contenido form input:focus , #contendor-contenido form select:focus{
+    border: 1px solid rgba(224,59,100,1);    
+    outline: none;
+}
+#contendor-contenido form button{
+    width: 40%;
+    font-family: Principal,Roboto;
+    font-size: 15px;    
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 15px;
+    color: rgba(255,255,255,1);
+    background-color: rgba(224,59,100,1);
+    cursor: pointer;
+    margin: 10px auto; 
+    transition: all 1s ease-out;   
+}
+#contendor-contenido form button:hover{
+    background-color: rgba(222, 26, 75,1);
+}
+/*CODIGO DE ESTILOS PARA VENTANA MEDIANA*/
+@media (max-width: 1000px){
+    #contenedor-global h1{  
+        font-size: 30px;
+    }
+    #contenedor-global h1, #contenedor-global p{
+        width: 90%;    
+    }
+    #contendor-contenido img, #contendor-contenido form{
+        width: 45%;
+    }
+    #contenedor-global p{  
+        font-size: 15px;
+        text-align: justify;
+    }
+}
+/*CODIGO DE ESTILOS PARA VENTANA PEQUEÃ‘A*/
+@media (max-width: 500px){
+    #contendor-contenido{
+        width: 100%;
+        display: block;
+    }
+    #contendor-contenido img{
+        width: 50%;
+    }
+    #contendor-contenido form{
+        width: 100%;
+    }
+    #contendor-contenido form{
+        width: 100%;
+        padding: 10px 20px;
+        text-align: center;
+    }
+}
+/*CODIGO DE ESTILOS PARA VENTANA MODAL*/
+.modalDialog {
+    position: fixed;        
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;    
+    -webkit-transition: all 400ms ease-in;
+    -moz-transition: all 400ms ease-in;
+    transition: all 400ms ease-in;    
+    overflow: scroll;
+}
+.logoModal{
+    margin: 0px auto;
+    width: 200px;
+    content: " ";
+    background-image: url(../assets/logo.PNG);
+    position: relative;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    -webkit-background-size: 150px auto;
+    -moz-background-size: 150px auto;
+    -o-background-size: 150px auto;
+}
+.invisible { visibility: hidden; opacity: 0; }
+.modalDialog > div {
+    width: 70%;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to left top, #fff, #fff, #fff, #fff, #fff);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    text-align: center;
+}
+#contenedorModal h3{
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    color: rgba(53,53,53,1);
+    font-size: 25px;
+    font-family: 'Principal',helvetica,verdana,sans-serif;
+    text-align: center;    
+}
+#contenedorModal button{
+    width: 40%;
+    font-family: Principal,Roboto;
+    font-size: 15px;    
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 15px;
+    color: rgba(255,255,255,1);
+    background-color: rgba(224,59,100,1);
+    cursor: pointer;
+    margin: 10px auto; 
+    transition: all 1s ease-out; 
+}
+#contenedorModal p{
+    width: 100%;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    color: rgba(10,10,10,1);
+    font-size: 20px;
+    font-family: Principal,Roboto;
+    text-align: center;
+}
